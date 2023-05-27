@@ -1,0 +1,10 @@
+{
+	"service-channel-id": "channel-id",
+	"messageId": "message-id",
+	"service-data": {
+		"user-discord-id": {
+			"user-number": "fivem-number",
+			"status": true
+		}
+	}
+}
