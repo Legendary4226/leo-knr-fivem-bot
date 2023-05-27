@@ -120,7 +120,8 @@ async function createEmbed(interaction, jsonData) {
     let embed = new EmbedBuilder()
         .setColor("#3f02e6")
         .setTitle('Tableau de service')
-        .setDescription('Liste des personnes en service.');
+        .setDescription('Liste des personnes en service.')
+        .setImage("https://c4.wallpaperflare.com/wallpaper/786/983/731/machine-garage-gta-grand-theft-auto-v-gta-5-hd-wallpaper-preview.jpg");
 
     for (let key in jsonData) {
         let emoji = jsonData[key].status ? ':white_check_mark:' : ':x:';

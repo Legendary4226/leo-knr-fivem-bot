@@ -1,10 +1,13 @@
 {
-	"service-channel-id": "channel-id",
-	"messageId": "message-id",
-	"service-data": {
-		"user-discord-id": {
-			"user-number": "fivem-number",
+	"channelId": "channel id",
+	"data": {
+		"User discord id": {
+			"userNumber": "fivem number",
 			"status": true
+		},
+		"Other user discord id": {
+			"userNumber": "fivem number",
+			"status": false
 		}
 	}
 }
