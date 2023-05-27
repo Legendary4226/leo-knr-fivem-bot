@@ -1,5 +1,6 @@
 # Custom
 /config.json
+data/service.json
 .vscode/
 .node-version
 
