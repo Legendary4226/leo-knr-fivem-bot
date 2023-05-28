@@ -2,6 +2,8 @@ const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 const fs = require('fs');
 const path = require('path');
 
+const embedEditionQueue = require("../../../service/EmbedEditionQueue.js");
+
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
  */
@@ -110,9 +112,15 @@ async function updateEmbed(interaction, json) {
         }
     } catch (ignored) { message = null; }
     if (json.hasOwnProperty('messageId') && message !== null) {
-        message.edit({ 'embeds': [embed] });
+        let promise = embedEditionQueue.addToQueue(async () => {
+            await message.edit({ 'embeds': [embed] });
+        });
+        await promise;
     } else {
-        json.messageId = (await interaction.channel.send({ 'embeds': [embed] })).id;
+        let promise = embedEditionQueue.addToQueue(async () => {
+            return (await interaction.channel.send({ 'embeds': [embed] })).id;
+        });
+        json.messageId = await promise;
     }
 }
 
