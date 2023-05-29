@@ -1,4 +1,4 @@
-class EmbedEditionQueue {
+class QueueingSystem {
     #stack;
 
     constructor() {
@@ -38,8 +38,8 @@ class EmbedEditionQueue {
     }
 }
 
-const embedEditionQueue = new EmbedEditionQueue();
+const queueingSystem = new QueueingSystem();
 
-Object.freeze(embedEditionQueue);
+Object.freeze(queueingSystem);
 
-module.exports = embedEditionQueue;
+module.exports = queueingSystem;

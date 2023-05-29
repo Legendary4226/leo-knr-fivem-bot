@@ -9,5 +9,6 @@
 			"userNumber": "fivem number",
 			"status": false
 		}
-	}
+	},
+	"moderationRole": "role id OR nothing"
 }
