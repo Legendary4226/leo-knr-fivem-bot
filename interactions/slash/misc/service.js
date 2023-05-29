@@ -62,7 +62,7 @@ module.exports = {
                 noError = false;
             }
 
-            noError = noError && writeFile(jsonPath, JSON.stringify(json));
+            noError = noError && writeFile(jsonPath, JSON.stringify(json, null, '\t'));
 
             if (noError) setEmbedContent(embedContent, 'Service', 'Ton status de service a bien été mis à jour !');
         }
